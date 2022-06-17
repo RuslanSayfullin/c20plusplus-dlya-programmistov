@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from settings_db_debug import DEBUG, DATABASES  # импорт настроект "режима отладки" и "базы данных"
+from .settings_db_debug import DEBUG, DATABASES  # импорт настроект "режима отладки" и "базы данных"
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

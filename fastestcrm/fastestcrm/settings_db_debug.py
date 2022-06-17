@@ -1,7 +1,3 @@
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
 """
 Django settings for DATABASES and DEBUG.
 """

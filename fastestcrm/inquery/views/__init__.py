@@ -1,1 +1,2 @@
 from inquery.views.clientlnclineeditview import ClientInclineEditView
+from inquery.views.newinqueryview import NewInqueryView

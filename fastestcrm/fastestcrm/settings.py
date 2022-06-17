@@ -104,3 +104,12 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 157286400    # Макс. размер (в байт
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# SMS рассылка
+# https://p1sms.ru/
+# login: Логин
+# password: Пароль
+P1SMS_API_SERVER = "https://admin.p1sms.ru/apiSms/create"
+P1SMS_API_KEY = "MK5OUeOpE2suTKN0qZ7dlVJf2friJYGbVmiXTQO5jkVW8QgII0h9wOLQZIfa"
+P1SMS_SENDER = "VIRTA"

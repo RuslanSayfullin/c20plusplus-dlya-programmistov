@@ -9,7 +9,7 @@ class ClientInclineEditView(generic.edit.BaseFormView):
     http_method_names = ["post"]
     form_class = ClientForm
     client = None
-    froze = None
+    inquery = None
 
     def get_form_kwargs(self):
         data = {}
@@ -20,7 +20,7 @@ class ClientInclineEditView(generic.edit.BaseFormView):
         data["room_client"] = self.request.POST.get("room_client") or self.client.room
         data["floor_client"] = self.request.POST.get("floor_client") or self.client.floor
         data["porch_client"] = self.request.POST.get("porch_client") or self.client.porch
-        data["type_production"] = self.request.POST.get("type_production") or self.froze.type_production
+        data["type_production"] = self.request.POST.get("type_production") or self.inquery.type_production
         return {'data': data}
 
     def form_valid(self, form):
@@ -40,10 +40,10 @@ class ClientInclineEditView(generic.edit.BaseFormView):
             return JsonResponse({"response": "return multi client"}, status=400)
         self.client = client[0]
 
-        self.froze = Inquery.objects.get(client=self.client)
-        if self.request.user != self.froze.designer and not self.request.user.has_perm('froze.vozm_perenaznachat_dizajnerov_v_zayavkah'):
+        self.inquery = Inquery.objects.get(client=self.client)
+        if self.request.user != self.inquery.designer and not self.request.user.has_perm('inquery.vozm_perenaznachat_dizajnerov_v_zayavkah'):
             return JsonResponse({"response": "not permission"}, status=403)
-        if self.froze.status not in (Inquery.INQUERY_NEW, Inquery.INQUERY_REPEAT, Inquery.INQUERY_THINK):
+        if self.inquery.status not in (Inquery.INQUERY_NEW, Inquery.INQUERY_REPEAT, Inquery.INQUERY_THINK):
             return JsonResponse({"response": "not permission"}, status=403)
 
         return super(ClientInclineEditView, self).dispatch(*args, **kwargs)

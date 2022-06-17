@@ -1,1 +1,2 @@
-from .client import ClientForm
+from .clientform import ClientForm
+from .newinqueryform import NewInqueryForm

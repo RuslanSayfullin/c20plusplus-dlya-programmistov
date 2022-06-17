@@ -45,6 +45,6 @@ class ClientForm(forms.Form):
         client.floor = self.cleaned_data.get('floor_client')
         client.porch = self.cleaned_data.get('porch_client')
         client.save()
-        froze = client.froze_set.all()[0]
-        froze.type_production = self.cleaned_data.get('type_production')
-        froze.save()
+        inquery = client.inquery_set.all()[0]
+        inquery.type_production = self.cleaned_data.get('type_production')
+        inquery.save()

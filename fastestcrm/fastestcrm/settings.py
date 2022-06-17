@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'debug_toolbar',                # Набор панелей, появляющихся на странице в режиме отладки
     'rest_framework',               # API интерфейс
 ] + [
-     'inquery.apps.InqueryConfig',
+    'inquery.apps.InqueryConfig',
+    'staff.apps.StaffConfig',
 ]
 
 MIDDLEWARE = [

@@ -6,6 +6,7 @@ from inquery.api import get_unique_uuid
 from inquery.forms import NewInqueryForm
 from inquery.models import Client, Inquery, InqueryStatus
 from inquery.utils import get_sms_text2, send_sms
+from staff.models import Staff
 
 
 class NewInqueryView(generic.FormView):

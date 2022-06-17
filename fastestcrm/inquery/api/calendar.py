@@ -29,3 +29,9 @@ def get_unique_uuid(model):
             model.objects.get(uuid=new_uuid)
         except ObjectDoesNotExist:
             return new_uuid
+
+
+def is_day_weekend(designer, datetime):
+    if Event.objects.filter(designer=designer, start_datetime=datetime, all_day=True).count():
+        return True
+    return False

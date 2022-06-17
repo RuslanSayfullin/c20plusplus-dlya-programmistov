@@ -18,5 +18,6 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Обработка ошибок
-handler404 = TemplateView.as_view(template_name="fastestcrm/404.html")
 handler403 = TemplateView.as_view(template_name="fastestcrm/403.html")
+handler404 = TemplateView.as_view(template_name="fastestcrm/404.html")
+

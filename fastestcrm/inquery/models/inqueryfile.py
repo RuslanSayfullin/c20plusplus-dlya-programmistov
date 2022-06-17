@@ -4,7 +4,8 @@ import os
 from django.db import models
 
 from inquery.managers import InqueryFileManager
-from inquerystatus import InqueryStatus
+
+from .inquerystatus import InqueryStatus
 
 
 class InqueryFile(models.Model):

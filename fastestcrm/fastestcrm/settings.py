@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 ] + [
     'inquery.apps.InqueryConfig',
     'staff.apps.StaffConfig',
+    'dogovora.apps.DogovoraConfig',
 ]
 
 MIDDLEWARE = [

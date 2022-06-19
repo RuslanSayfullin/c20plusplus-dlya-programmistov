@@ -2,6 +2,7 @@ from django.core.exceptions import PermissionDenied, ObjectDoesNotExist
 from django.urls import reverse_lazy
 from django.views import generic
 
+from dogovora.models import Dogovor
 from inquery.api import get_unique_uuid
 from inquery.forms import NewInqueryForm
 from inquery.models import Client, Inquery, InqueryStatus

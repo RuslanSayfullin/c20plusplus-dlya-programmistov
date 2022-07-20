@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+{% spaceless %}
+{% load static %}
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Портал Реформа{% endblock %}</title>
+
+    <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <link rel="shortcut icon" href="{% static 'fastestcrm/favicon.ico' %}" type="image/x-icon" />
+	<link href="{% static 'custom/bootstrap_docs.css' %}" rel="stylesheet">
+	<link href="{% static 'custom/styles.css' %}?v=47" rel="stylesheet">
 </head>
 <body>
+    <noscript><meta http-equiv="refresh" content="0; URL=/no-js"></noscript>
+	{% include "portal/_navbar.html" %}
+	{% block content %}{% endblock content %}
+    <link href="{% static 'bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
+	<script src="{% static 'bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
+
+    <link href="{% static 'bootstrap-tagsinput/dist/bootstrap-tagsinput.css' %}" rel="stylesheet">
+	<script src="{% static 'bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js' %}"></script>
+	<script src="{% static 'bootstrap3-typeahead/bootstrap3-typeahead.min.js' %}"></script>
+
+    <link href="{% static 'bootstrap3-dialog/dist/css/bootstrap-dialog.min.css' %}" rel="stylesheet">
+	<script src="{% static 'bootstrap3-dialog/dist/js/bootstrap-dialog.min.js' %}"></script>
+
+    <link href="{% static 'datetimepicker/jquery.datetimepicker.css' %}" rel="stylesheet">
+	<script src="{% static 'datetimepicker/jquery.datetimepicker.js' %}"></script>
+
+    <script src="{% static 'jquery.inputmask/dist/jquery.inputmask.bundle.min.js' %}"></script>
+
+    <link href="{% static 'inquery/suggestions-4.10.css' %}" rel="stylesheet">
+	<script src="{% static 'inquery/jquery.suggestions-4.10.min.js' %}"></script>
+
+    <script src="{% static 'custom/base.js' %}?v=23"></script>
+	<script src="{% static 'custom/javascripts.js' %}?v=47"></script>
+
+    <script src="{% static 'custom/android.js' %}?v=1"></script>
 
 </body>
 </html>
+{% endspaceless %}

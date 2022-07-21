@@ -7,7 +7,7 @@ from inquery.managers import InqueryStatusManager
 
 class InqueryStatus(models.Model):
     """Статус заявки"""
-    froze = models.ForeignKey(Inquery, on_delete=models.CASCADE, verbose_name="Заявка")
+    inquery = models.ForeignKey(Inquery, on_delete=models.CASCADE, verbose_name="Заявка")
     call_back = models.DateField(blank=True, null=True)
     start_datetime = models.DateTimeField(blank=True, null=True, verbose_name="Дата замера")
     comment = models.TextField(blank=True, null=True)
@@ -22,7 +22,7 @@ class InqueryStatus(models.Model):
     manager = InqueryStatusManager()
 
     def __unicode__(self):
-        return u"{0} {1} {2}".format(self.froze, self.status, self.created_at)
+        return u"{0} {1} {2}".format(self.inquery, self.status, self.created_at)
 
     class Meta:
         default_permissions = []

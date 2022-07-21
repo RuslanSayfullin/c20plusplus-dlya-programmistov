@@ -5,7 +5,7 @@ from django.utils.formats import date_format
 
 
 # Create your models here.
-from dogovora.models import DizaynerskoeVoznagrazhdenie
+from .dizaynerskoevoznagrazhdenie import DizaynerskoeVoznagrazhdenie
 from inquery.models import Inquery
 
 

@@ -37,18 +37,14 @@ int main() {
             case 6:
                 ++frequency6; // Увеличиваем счетчик 6
                 break;
-    default: // Если сгенерировано недопустимое значение
-    cout « "Prograni should r1ever get here ! ";
-    break;
+            default: // Если сгенерировано недопустимое значение
+                cout « "Program should never get here!";
+                break;
+        }
     }
-    45
-    46}
-    47
-    48
-    49
-    50
-    51cout « fmt: :format("{:>4}{:>13}\n", "Face", "Frequency"); // Заголовки
-    cout « fmt::format("{:>4d}{:>13d}\п", 1, frequencyl)
+
+    cout « fmt::format("{:>4}{:>13}\n", "Face", "Frequency"); // Заголовки
+    cout « fmt::format("{:>4d}{:>13d}\n", 1, frequency1)
     « fmt::format("{:>4d}{:>13d}\n", 2, frequency2)
     « fmt::format("{:>4d}{:>13d}\n", 3, frequencyЗ)
     « fmt::format("{:>4d}{:>13d}\n", 4, frequency4)
